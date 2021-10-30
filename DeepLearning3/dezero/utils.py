@@ -1,4 +1,4 @@
- VariavleクラスをDOT言語に変換する関数
+#  VariavleクラスをDOT言語に変換する関数
 # verboseはTrueの時,ndarrayインスタンスの「形状」と「型」も合わせてラベルとして出力する
 def _dot_var(v, verbose=False):
     dot_var='{} [label="{}", color =orange, style=filled]\n'

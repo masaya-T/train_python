@@ -9,20 +9,18 @@ class WorkerListView(generic.ListView):
     template_name = 'attendance/list.html'
     # context_object_name 属性を与え、 workers を代わりに使用すると指定します。
     context_object_name = 'workers'
-
+    
+    # get_querysetメソッドは主にListViewで使われますが、モデルインスタンスの一覧を返すメソッドです。
     def get_queryset(self):
         workers = Worker.objects.all()  # データベースからオブジェクトを取得して
         for i in workers:
             print(i.person,i.joined_at)
         return workers
-    def get_WorkersList(self,request):
-        
-        workers = Worker.objects.all()  # データベースからオブジェクトを取得して
-        context['workers'] = workers  # 入れ物に入れる
-        print(workers)
-        return render(request,'attendance/list.html',context)
+
     
 class PersonView(generic.DetailView):
     model = Person
     template_name = 'attendance/person.html'
+
+
 

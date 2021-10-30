@@ -1,6 +1,6 @@
 
 
-is_simple_core = True
+is_simple_core = False
 # __init__.pyはモジュールがimportされた時に、最初に実行されるファイル
 # シンプルな機能のみを使いたい場合
 if is_simple_core:

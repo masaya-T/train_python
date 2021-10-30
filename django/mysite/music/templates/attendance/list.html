@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Person Detail</title>
+  <title>Worker List</title>
 </head>
 <body>
   <table>
@@ -17,21 +17,17 @@
         <th>名前</th>
         <th>性別</th>
         <th>誕生日</th>
-        <th>出身地</th>
-        <th>現住所</th>
-        <th>メールアドレス</th>
       </tr>
     </thead>
     <tbody>
-        <tr>
-          <td>{{person.id}}</td>
-          <td>{{person.name}}</td>
-          <td>{{person.sex}}</td>
-          <td>{{person.birthday}}</td>
-          <td>{{person.address_from}}</td>
-          <td>{{person.current_address}}</td>
-          <td>{{person.email}}</td>
-        </tr>
+        {% for worker in workers %}
+          <tr>
+            <td>{{worker.id}}</td>
+            <td><a href="{% url 'attendance:person' worker.id%}">{{worker.person.name}}</a></td>
+            <td>{{worker.person.sex}}</td>
+            <td>{{worker.person.birthday}}</td>
+          </tr>
+        {% endfor %}
     </tbody>
   </table>
 </body>

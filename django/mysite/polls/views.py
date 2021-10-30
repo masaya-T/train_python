@@ -10,6 +10,7 @@ class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
 
+    # get_querysetメソッドは主にListViewで使われますが、モデルインスタンスの一覧を返すメソッドです。
     def get_queryset(self):
         """Return the last five published questions (not including those set to be
     published in the future)."""
@@ -17,7 +18,7 @@ class IndexView(generic.ListView):
         pub_date__lte=timezone.now()
     ).order_by('-pub_date')[:5]
 
-
+#  DetailView 汎用ビューは <app name>/<model name>_detail.html という名前のテンプレートを使います。この場合、テンプレートの名前は "polls/question_detail.html" です。 
 class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
