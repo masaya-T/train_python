@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang='ja'>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <title>Person Detail</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Person Detail</title>
 </head>
+
 <body>
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>名前</th>
-        <th>性別</th>
-        <th>誕生日</th>
-        <th>出身地</th>
-        <th>現住所</th>
-        <th>メールアドレス</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>{{person.id}}</td>
-          <td>{{person.name}}</td>
-          <td>{{person.sex}}</td>
-          <td>{{person.birthday}}</td>
-          <td>{{person.address_from}}</td>
-          <td>{{person.current_address}}</td>
-          <td>{{person.email}}</td>
-        </tr>
-    </tbody>
-  </table>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>名前</th>
+                <th>性別</th>
+                <th>誕生日</th>
+                <th>出身地</th>
+                <th>現住所</th>
+                <th>メールアドレス</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{person.id}}</td>
+                <td>{{person.name}}</td>
+                <td>{{person.sex}}</td>
+                <td>{{person.birthday}}</td>
+                <td>{{person.address_from}}</td>
+                <td>{{person.current_address}}</td>
+                <td>{{person.email}}</td>
+                <td>
+                    <figure>
+                        <audio controls src="">
+                          Your browser does not support the
+                          <code>audio</code> element.
+                        </audio>
+                    </figure>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 </html>
