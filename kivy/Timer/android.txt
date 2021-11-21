@@ -1,0 +1,3 @@
+title=Touchtracer
+author=masaya
+orientation=landscape
