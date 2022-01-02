@@ -129,6 +129,8 @@ dmypy.json
 .pyre/
 
 FP16/
-/djamgo/mysite/local_settings.py
-/django/mysite/*/static/*
+/djamgo/*/*/local_settings.py
+/django/*/*/static/*
+/django/*/static/*
+
 
